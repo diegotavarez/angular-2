@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 import { InputPropertyComponent } from './input-property.component';
+import {OutputPropertyComponent} from './output-property.component';
 
 @Component({
   selector: 'app-data-binding',
@@ -24,6 +25,8 @@ export class DataBindingComponent implements OnInit {
   pessoa = {nome: '', idade: 38};
 
   nomeCurso : string = 'Curso Angular 2';
+
+  valorInicial : number = 10;
 
   getValor(){
     return 1;
@@ -53,6 +56,10 @@ export class DataBindingComponent implements OnInit {
 
   onMouseSpan(){
     this.isMouseOver = !this.isMouseOver;
+  }
+
+  onValorMudou(event){
+    alert(event.novoValor);
   }
 
 }

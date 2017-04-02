@@ -1,1 +1,16 @@
+<h1 class ="h1">Data Binding</h1>
+
+
 <app-data-binding></app-data-binding>
+
+<h1 class ="h1">Life Cycle Hooks</h1>
+
+<section>
+  <article>
+    <lifecycle [valorInicial]="valorInicial" *ngIf="deletarConteudo != true"></lifecycle>
+
+    <button class="btn btn-default" (click)="valorInicial = 20">Mudar o valor</button>
+
+    <button class="btn btn-default" (click)="deletarConteudo = true">Deletar tag life cycle</button>
+  </article>
+</section>

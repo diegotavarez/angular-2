@@ -126,5 +126,8 @@
     <curso nome="Curso de .NET"></curso>
     <br>
     <curso [nome]="nomeCurso"></curso>
+    <br>
+    <contador [valor]="valorInicial" (eventoMudouValor)="onValorMudou($event)"></contador>
+
   </article>
 </section>
