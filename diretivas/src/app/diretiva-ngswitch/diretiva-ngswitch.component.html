@@ -1,0 +1,18 @@
+<h3>ngSwitch</h3>
+
+<nav class="navbar navbar-default">
+  <div class="collapse navbar-collapse">
+    <ul class="nav nav-tabs">
+      <li [class.active]="aba == 'home'" (click)="aba = 'home'"><a>Home</a></li>
+      <li [class.active]="aba == 'mapa'" (click)="aba = 'mapa'"><a>Mapa</a></li>
+      <li [class.active]="aba == 'lista'"(click)="aba = 'lista'"><a>Lista</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container" [ngSwitch]="aba">
+  <p *ngSwitchCase="'mapa'">Modo Mapa Ativado</p>
+  <p *ngSwitchCase="'lista'">Modo Lista Ativado</p>
+  <p *ngSwitchDefault>Home</p>
+</div>
