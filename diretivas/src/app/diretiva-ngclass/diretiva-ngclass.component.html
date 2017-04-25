@@ -1,0 +1,22 @@
+<h3>ngClass</h3>
+<h4>Utilizando Class Binding</h4>
+<h1>
+  <i class="glyphicon"
+  [class.glyphicon-star-empty]="!meuFavorito"
+  [class.glyphicon-star]="meuFavorito"
+  (click)="onClick()"
+  >
+  </i>
+</h1>
+
+<h4>Utilizando a Diretiva ngClass</h4>
+<h1>
+  <i class="glyphicon"
+  [ngClass]="{
+    'glyphicon-star-empty': !meuFavorito,
+    'glyphicon-star': meuFavorito
+  }"
+  (click)="onClick()"
+  >
+  </i>
+</h1>
