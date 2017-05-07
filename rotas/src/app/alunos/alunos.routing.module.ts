@@ -8,7 +8,7 @@ import { AlunoFormularioComponent } from './aluno-formulario/aluno-formulario.co
 //quando queremos que um componente pai seja renderizado ao mesmo tempo que o componente filho na tela, utilizamos rotas filhas
 
 const alunosRoutes = [
-  {path:'alunos', component: AlunosComponent, children: [
+  {path:'', component: AlunosComponent, children: [
     {path:'novo',component : AlunoFormularioComponent},
     {path: ':id',component:AlunoDetalheComponent},
     {path:':id/editar',component : AlunoFormularioComponent}
