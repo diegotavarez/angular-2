@@ -1,3 +1,4 @@
+import { AlunosGuard } from './../guards/alunos.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -8,7 +9,9 @@ import { AlunoFormularioComponent } from './aluno-formulario/aluno-formulario.co
 //quando queremos que um componente pai seja renderizado ao mesmo tempo que o componente filho na tela, utilizamos rotas filhas
 
 const alunosRoutes = [
-  {path:'', component: AlunosComponent, children: [
+  {path:'', component: AlunosComponent, 
+  canActivateChild: [AlunosGuard],
+  children: [
     {path:'novo',component : AlunoFormularioComponent},
     {path: ':id',component:AlunoDetalheComponent},
     {path:':id/editar',component : AlunoFormularioComponent}
