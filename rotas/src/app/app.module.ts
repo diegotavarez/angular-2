@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app.routing.module';
 // import { AlunosModule } from './alunos/alunos.module';
 
 import { AuthService } from './login/auth.service';
+import { AuthGuard } from './guards/auth.guard';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AuthService } from './login/auth.service';
     // routing
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
