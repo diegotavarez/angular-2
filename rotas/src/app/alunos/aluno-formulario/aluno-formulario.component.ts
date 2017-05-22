@@ -12,6 +12,7 @@ import{ AlunosService } from '../alunos.service';
 export class AlunoFormularioComponent implements OnInit {
   aluno: any = {};
   inscricao: Subscription;
+  private formMudou: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,6 +30,19 @@ export class AlunoFormularioComponent implements OnInit {
         }
       }
     );
+  }
+
+  onInput(){
+    console.log("mudou nome");
+    this.formMudou = true;
+  }
+
+  podeMudarRota(){
+    if(this.formMudou){
+      confirm('Tem certeza que deseja sair dessa pagina?');
+    }
+
+    return true;
   }
 
 

@@ -16,10 +16,10 @@ export class AlunosGuard implements CanActivateChild {
     ): Observable<boolean>|Promise<boolean>|boolean {
       
       if(state.url.includes('editar')){
-        alert('Você não tem permissão para editar este item');
-        return Observable.of(false);
+        //alert('Você não tem permissão para editar este item');
+        //return Observable.of(false);
       }
-      console.log('Guarda de rota filha');
+      //console.log('Guarda de rota filha');
       
       return true;
     }
