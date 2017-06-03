@@ -15,6 +15,8 @@ export class AlunosGuard implements CanActivateChild {
       state: RouterStateSnapshot
     ): Observable<boolean>|Promise<boolean>|boolean {
       
+      console.log('AlunosGuard');
+      
       if(state.url.includes('editar')){
         //alert('Você não tem permissão para editar este item');
         //return Observable.of(false);
