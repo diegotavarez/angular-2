@@ -30,12 +30,13 @@ const appRoutes: Routes = [
 
   { path: '', redirectTo: '/home', pathMatch: 'full'},
 
-  { path: '**', component: PaginaNaoEncontradaComponent}
-  //canActivate: [AuthGuard]
+  { path: '**',
+  component: PaginaNaoEncontradaComponent,
+  canActivate: [AuthGuard]}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [RouterModule.forRoot(appRoutes, {useHash: true})],
   exports: [RouterModule]
 
 })
