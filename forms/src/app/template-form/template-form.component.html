@@ -27,7 +27,7 @@
 
   </div>
 
-
+<div ngModelGroup="endereco">
   <div class="form-group">
     <div class="col-md-3" [ngClass]="aplicaCSSErro(cep)">
       <label for="cep" class="control-label">CEP</label>
@@ -74,6 +74,8 @@
     <div class="col-md-3" [ngClass]="aplicaCSSErro(estado)">
       <label for="estado" class="control-label">Estado</label>
       <input type="text" class="form-control" id="estado" name="estado" ngModel #estado="ngModel">
+    </div>
+
     </div>
   </div>
  <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button>
