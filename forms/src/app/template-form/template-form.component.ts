@@ -25,7 +25,8 @@ export class TemplateFormComponent implements OnInit {
     //resttestest.com
     this.http.post('https://httpbin.org/post', JSON.stringify(form.value))
     .map(res => res)
-    .subscribe((dados) => console.log(dados));
+    .subscribe((dados) => {console.log(dados);
+    form.form.reset();});
   }
 
   verificaValidTouched(campo){
