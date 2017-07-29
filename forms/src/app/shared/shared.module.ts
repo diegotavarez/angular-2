@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { DropdownService } from './services/dropdown.service';
 import { CampoControlErroComponent } from './campo-control-erro/campo-control-erro.component';
@@ -8,7 +9,9 @@ import { CommonModule } from '@angular/common';
 @NgModule({
   imports: [
     CommonModule,
-    HttpModule
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     FormDebugComponent,
@@ -18,7 +21,11 @@ import { CommonModule } from '@angular/common';
     DropdownService
   ],
   exports: [
-     FormDebugComponent,
+    CommonModule,
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
+    FormDebugComponent,
     CampoControlErroComponent   
   ]
 })
